@@ -1,0 +1,8 @@
+import enum
+
+class StatusProject(enum.Enum):
+    EM_ANALISE = "EM_ANALISE"
+    APROVADO = "APROVADO"
+    RECUSADO = "RECUSADO"
+    EM_ATUALIZACAO = "EM_ATUALIZACAO"
+    CONCLUIDO = "CONCLUIDO"

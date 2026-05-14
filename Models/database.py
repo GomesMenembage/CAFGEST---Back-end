@@ -1,6 +1,6 @@
 import enum
 from datetime import datetime
-from ..Services.Status import StatusProject
+from Services.Status import StatusProject
 
 from sqlalchemy import (
     create_engine,

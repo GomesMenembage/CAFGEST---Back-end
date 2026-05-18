@@ -1,5 +1,5 @@
-from fastapi import HTTPException
-from sqlalchemy.orm import Session, Depends
+from fastapi import HTTPException, Depends
+from sqlalchemy.orm import Session
 from Services.session import create_session
 from Models.database import Aluno
 from Apps.Aluno.Schemas.AuthSchema import UserRegister

@@ -1,13 +1,13 @@
 from pydantic import BaseModel
 
-UserRegister(BaseModel):
+class UserRegister(BaseModel):
     nome: str
     curso: str
     turma:str
     numero:str
     senha:str
     
-UserLogin(BaseModel):
+class UserLogin(BaseModel):
     numero: str
     turma: str
     senha: str

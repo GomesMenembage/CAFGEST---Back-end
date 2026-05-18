@@ -111,7 +111,7 @@ class PrazoAtualizacao(Base):
 
 # configs to creste db
 
-engine = create_engine("sqlite:///cafgest.db", echo=True)
+engine = create_engine("sqlite:///cafgest.db")
 
 def start_db():
     Base.metadata.create_all(bind=engine)

@@ -9,7 +9,7 @@ from Services.session import create_session
 def login_aluno( data: UserLogin,session: Session = Depends(create_session)):
 
     aluno = (
-        session.query(Aluno).filter(Aluno.numero == numero).first()
+        session.query(Aluno).filter(Aluno.numero == data.numero).first()
     )
 
     if not aluno:

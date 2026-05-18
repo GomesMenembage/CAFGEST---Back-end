@@ -8,7 +8,7 @@ from Middleware.hash import hash_password
 
 def criar_aluno(data: UserRegister,session: Session = Depends(create_session)):
 
-    aluno_existente =session.query(Aluno).filter(Aluno.numero == numero).first()
+    aluno_existente =session.query(Aluno).filter(Aluno.numero == data.numero).first()
 
     if aluno_existente:
 

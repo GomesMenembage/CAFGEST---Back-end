@@ -8,7 +8,7 @@ from Services.session import create_session
 auth = APIRouter(prefix="/auth", tags=["login e cadastro"])
 
 @auth.post("/register/")
-def criar_aluno(data: UserRegister, session: Session = Depends(create_session)):
+def cadastro(data: UserRegister, session: Session = Depends(create_session)):
     usuario = criar_aluno(data, session)
     if not usuario:
         return {"message": "Usuário já existe"}

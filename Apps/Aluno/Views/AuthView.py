@@ -16,4 +16,4 @@ def cadastro(data: UserRegister, session: Session = Depends(create_session)):
 
 @auth.post("/login/")
 def login(data: UserLogin, session: Session = Depends(create_session)):
-    return llogin_aluno(data, session)
+    return login_aluno(data, session)

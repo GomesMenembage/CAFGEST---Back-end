@@ -6,7 +6,7 @@ from Apps.Aluno.Schemas.AuthSchema import UserRegister
 from Middleware.hash import hash_password
 
 
-def criar_aluno(session: Session = Depends(create_session), data: UserRegister):
+def criar_aluno(data: UserRegister,session: Session = Depends(create_session)):
 
     aluno_existente =session.query(Aluno).filter(Aluno.numero == numero).first()
 

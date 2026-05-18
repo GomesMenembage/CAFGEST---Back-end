@@ -1,12 +1,12 @@
-from fastapi import HTTPException, depends
+from fastapi import HTTPException, Depends
 from sqlalchemy.orm import Session
 from Apps.Aluno.Schemas.AuthSchema import UserLogin
-from Models.Database import Aluno
+from Models.database import Aluno
 from Middleware.hash import verify_password
 from Middleware.jwt import create_access_token
+from Services.session import create_session
 
-
-def login_aluno(session: Session = Depends(create_session), data: UserLogin):
+def login_aluno( data: UserLogin,session: Session = Depends(create_session)):
 
     aluno = (
         session.query(Aluno).filter(Aluno.numero == numero).first()
